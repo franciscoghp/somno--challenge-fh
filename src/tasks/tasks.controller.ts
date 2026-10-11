@@ -31,7 +31,7 @@ export class TasksController {
     try {
       return await this.tasksService.create(body);
     } catch (error) {
-      console.log('EL ERROR MARICO ', error);
+      console.error('Error creating task:', error);
       return error;
     }
   }

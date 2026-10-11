@@ -41,7 +41,7 @@ export class TasksService {
       await this.tasksRepo.update(id, body);
       return this.tasksRepo.findOne({ where: { id } });
     } catch (error) {
-      console.log('EL ERROR EN EL SERVICE ', error);
+      console.error('Error in tasks service:', error);
       return new HttpException(error.message, HttpStatus.NOT_IMPLEMENTED);
     }
   }
